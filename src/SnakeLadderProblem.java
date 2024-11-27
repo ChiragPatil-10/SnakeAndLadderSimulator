@@ -17,12 +17,17 @@ public class SnakeLadderProblem {
 
             switch (option) {
                 case 0:
-                    System.out.println("Option: No Play. Player stays at postion: " + start_position);
+                    System.out.println("Option: No Play. Player stays at position: " + start_position);
                     break;
 
                 case 1:
                     start_position += dieRoll;
-                    System.out.println("Option: Ladder!!. Player climbs up to position: " + start_position);
+                    if (start_position > winningPosition) {
+                        start_position -= dieRoll;
+                        System.out.println("Move exceeds winning position. Stay at position: " + start_position);
+                    } else {
+                        System.out.println("Option: Ladder!!. Player climbs up to position: " + start_position);
+                    }
                     break;
 
                 case 2:
