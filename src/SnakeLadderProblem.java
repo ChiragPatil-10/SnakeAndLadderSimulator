@@ -21,8 +21,12 @@ public class SnakeLadderProblem {
                     break;
 
                 case 1:
-                    start_position += dieRoll;
-                    System.out.println("Option: Ladder!!. Player climbs up to position: " + start_position);
+                    if (start_position + dieRoll > winningPosition) {
+                        System.out.println("Move exceeds 100. Stay at position: " + start_position);
+                    } else{
+                        start_position += dieRoll;
+                        System.out.println("Option: Ladder!!. Player climbs up to position: " + start_position);
+                    }
                     break;
 
                 case 2:
