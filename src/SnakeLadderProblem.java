@@ -10,10 +10,6 @@ public class SnakeLadderProblem {
         Random random = new Random();
         int dieRoll = random.nextInt(6) + 1;
         System.out.println("The Player rolled: " + dieRoll);
-
-        start_position += dieRoll;
-        System.out.println("PLayer moves to the Position: " + start_position);
-        
     }
 }
 
