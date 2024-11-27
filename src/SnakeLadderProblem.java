@@ -6,9 +6,11 @@ public class SnakeLadderProblem {
 
         int start_position = 0;
         int winningPosition = 100;
+        
         System.out.println("Player Start at position: " + start_position);
 
         Random random = new Random();
+
         while (start_position < winningPosition) {
             int dieRoll = random.nextInt(6) + 1;
             System.out.println("The Player rolled: " + dieRoll);
@@ -17,13 +19,13 @@ public class SnakeLadderProblem {
 
             switch (option) {
                 case 0:
-                    System.out.println("Option: No Play. Player stays at postion: " + start_position);
+                    System.out.println("Option: No Play. Player stays at position: " + start_position);
                     break;
 
                 case 1:
                     if (start_position + dieRoll > winningPosition) {
                         System.out.println("Move exceeds 100. Stay at position: " + start_position);
-                    } else{
+                    } else {
                         start_position += dieRoll;
                         System.out.println("Option: Ladder!!. Player climbs up to position: " + start_position);
                     }
@@ -36,7 +38,7 @@ public class SnakeLadderProblem {
                     }
                     System.out.println("Option: Snake! Player slides down to position: " + start_position);
                     break;
-        }
+            }
 
             System.out.println("Current Position: " + start_position);
         }
@@ -44,9 +46,3 @@ public class SnakeLadderProblem {
     }
 
 }
-
-
-
-
-
-
