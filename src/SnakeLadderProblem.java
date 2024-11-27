@@ -37,7 +37,7 @@ public class SnakeLadderProblem {
                     }
                     System.out.println("Option: Snake! Player slides down to position: " + start_position);
                     break;
-        }
+            }
 
             System.out.println("Current Position: " + start_position);
         }
@@ -45,9 +45,3 @@ public class SnakeLadderProblem {
     }
 
 }
-
-
-
-
-
-
