@@ -1,4 +1,6 @@
+
 import java.util.Random;
+
 
 public class SnakeLadderProblem {
     public static void main(String[] args) {
@@ -6,12 +8,17 @@ public class SnakeLadderProblem {
 
         int start_position = 0;
         int winningPosition = 100;
+        int diceRolls = 0;
+
         System.out.println("Player Start at position: " + start_position);
 
         Random random = new Random();
+
         while (start_position < winningPosition) {
+            diceRolls++;
+
             int dieRoll = random.nextInt(6) + 1;
-            System.out.println("The Player rolled: " + dieRoll);
+            System.out.println("Dice Roll: " + diceRolls + ": Rolled a " + dieRoll);
 
             int option = random.nextInt(3);
 
@@ -36,13 +43,13 @@ public class SnakeLadderProblem {
                     }
                     System.out.println("Option: Snake! Player slides down to position: " + start_position);
                     break;
-        }
+            }
 
-            System.out.println("Current Position: " + start_position);
+            System.out.println("Current Position after roll: " + start_position);
         }
         System.out.println("Congratulations!! The player has reached the winning position. " + winningPosition);
+        System.out.println("Total dice rolls to win the game: " + diceRolls);
     }
-
 }
 
 
